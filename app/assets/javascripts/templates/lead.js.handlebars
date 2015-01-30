@@ -14,4 +14,9 @@
   <p>
     Phone: {{model.phone}}
   </p>
+
+  <p>
+    <label>Status:</label>
+    {{view Ember.Select content=App.Lead.STATUSES value=model.status}}
+  </p>
 </article>
