@@ -2,7 +2,11 @@
   <h1>Leads</h1>
   <ul>
     {{#each lead in controller}}
-      <li>{{ lead.fullName }}</li>
+      <li>
+        {{#link-to 'lead' lead}}
+          {{ lead.fullName }}
+        {{/link-to}}
+      </li>
     {{/each}}
   </ul>
 </article>
