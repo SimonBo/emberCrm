@@ -17,6 +17,22 @@
 
   <p>
     <label>Status:</label>
-    {{view Ember.Select content=App.Lead.STATUSES value=model.status}}
+    {{view "select" content=App.Lead.STATUSES value=model.status}}
+  </p>
+
+  <p>
+    <label>Notes:</label>
+    <br>
+    {{textarea value=model.notes}}
+  </p>
+
+  <p>
+    <input type="submit" value='Save Changes' {{action "saveChanges"}}>
+    {{#if showUnsavedMessage}}
+      <div class="unsaved">unsaved changes</div>
+    {{/if}}
+    {{#if isSaving}}
+      <div class="saving">saving...</div>
+    {{/if}}
   </p>
 </article>
