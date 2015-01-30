@@ -1,6 +1,10 @@
+{{outlet}}
 <article id="lead">
   <h1>
     {{model.fullName}}
+    {{#link-to 'lead.edit' model classNames='edit'}}
+    Edit
+    {{/link-to}}
   </h1>
 
   <p>
