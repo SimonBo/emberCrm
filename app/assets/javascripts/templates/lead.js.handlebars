@@ -31,6 +31,7 @@
   </p>
 
   <p>
+    <a {{ bindAttr href="#"}} class="delete" {{ action "delete" on="click" }}>delete</a>
     <input type="submit" value='Save Changes' {{action "saveChanges"}}>
     {{#if showUnsavedMessage}}
       <div class="unsaved">unsaved changes</div>
